@@ -11,13 +11,13 @@ Programmieraufwand:
 -> Verschwinden des Käses bei Leben = 0
 
 Grafiken:
-- Maus
-- Koch
-- Pfanne
-- Hintergrund 
-- Käse
+- Maus ✓
+- Koch ✓
+- Pfanne ✓
+- Hintergrund ✓
+- Käse ✓
 - Game Over
-- Startmenü
+- Startmenü ✓
 
 Vorgehensweise:
 Montag:
