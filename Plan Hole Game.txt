@@ -1,14 +1,4 @@
-Mausspiel
-
-Programmieraufwand:
--> Lebensanzeige Käse
--> Koch Bewegen W,A,S,D und in Bewegungsrichtung ausrichten
--> Mäuse verschwinden und spornen bei Löchern (Mauscounter)
--> Pfanne schwingen
--> Weglaufen der Mäuse 
--> Laufen der Mäuse zum Käse
--> Mäuse am Käse zählen und lifesteal berechnen
--> Verschwinden des Käses bei Leben = 0
+﻿Mausspiel
 
 Grafiken:
 - Maus ✓
@@ -21,14 +11,15 @@ Grafiken:
 
 Vorgehensweise:
 Montag:
--> Grafiken entwerfen
--> Szenen designen: Start, Game, GameOver
+-> Grafiken entwerfen ✓
+-> Szenen designen: Start, Game, GameOver ✓
 Dienstag:
--> Buttons programmieren (Start Game, Replay, Quit)
--> Movement Koch
--> Movement Pfanne
+-> Buttons programmieren (Start Game, Replay, Quit) ✓
+-> Movement Koch ✓
+-> Movement Pfanne ✓
 Mittwoch:
--> Movement der Mäuse
--> Spornen der Mäuse und Verschwinden bei Löchern
+-> Movement der Mäuse ✓
+-> Spornen der Mäuse ✓ und Verschwinden bei Löchern
+-> EatingPlace zuteilen über GameManager
 -> Lebensanzeige und Mäuse zählen
 -> Bei Leben = 0, GameOver
