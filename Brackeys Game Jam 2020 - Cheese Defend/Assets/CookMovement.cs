@@ -22,23 +22,23 @@ public class CookMovement : MonoBehaviour
         {
             
 
-            this.gameObject.transform.position += new Vector3(0, 0.1f * movementSpeed / 100, 0);
+            this.gameObject.transform.position += new Vector3(0, 0.1f * movementSpeed * Time.deltaTime, 0);
 
         }
 
         if (Input.GetKey("s"))
         {
-            this.gameObject.transform.position += new Vector3(0, -0.1f * movementSpeed / 100, 0);
+            this.gameObject.transform.position += new Vector3(0, -0.1f * movementSpeed * Time.deltaTime, 0);
         }
 
         if (Input.GetKey("d"))
         {
-            this.gameObject.transform.position += new Vector3(0.1f * movementSpeed / 100, 0, 0);
+            this.gameObject.transform.position += new Vector3(0.1f * movementSpeed * Time.deltaTime, 0, 0);
         }
 
         if (Input.GetKey("a"))
         {
-            this.gameObject.transform.position += new Vector3(-0.1f * movementSpeed / 100, 0, 0);
+            this.gameObject.transform.position += new Vector3(-0.1f * movementSpeed * Time.deltaTime, 0, 0);
         }
     }
 
