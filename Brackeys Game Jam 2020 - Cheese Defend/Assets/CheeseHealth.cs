@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CheeseHealth : MonoBehaviour
 {
-
+    public GameObject gameManager;
     public int maxHealth;
     public int currentHealth;
 
@@ -21,9 +21,9 @@ public class CheeseHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+       if (currentHealth <= 0)
         {
-            TakeDamage(20);
+            gameManager.GetComponent<SceneLoader>().LoadScene("GameOver");
         }
        
     }
