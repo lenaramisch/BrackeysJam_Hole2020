@@ -6,8 +6,11 @@ public class CheeseEater : MonoBehaviour
 {
     public int mouseDamage;
     public float speed;
+    public float distanceToKeep = 0.5f;
     public GameObject target;
     public GameObject Cheese;
+
+    public bool gotHit = false;
 
     private Transform myEatingPlace;
 
@@ -22,13 +25,18 @@ public class CheeseEater : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float step = speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(this.transform.position, myEatingPlace.position, step);
+        float dist = Vector3.Distance(Cheese.transform.position, this.transform.position);
 
-        Vector3 vectorToTarget = Cheese.transform.position - transform.position;
-        float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
-        Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
-        transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * speed);
+        if (dist >= distanceToKeep && !gotHit)
+        {
+            float step = speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(this.transform.position, myEatingPlace.position, step);
+
+            Vector3 vectorToTarget = Cheese.transform.position - transform.position;
+            float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
+            Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
+            transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * speed);
+        }
 
         if (target != null)
         {

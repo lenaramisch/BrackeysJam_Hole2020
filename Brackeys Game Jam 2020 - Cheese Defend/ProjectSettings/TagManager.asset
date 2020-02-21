@@ -15,10 +15,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - table
+  - pan
+  - player
+  - mouse
   - 
   - 
   - 
@@ -40,6 +40,27 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3695235897
+    locked: 0
+  - name: Table
+    uniqueID: 3344800911
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Plate
+    uniqueID: 3530903537
+    locked: 0
+  - name: Silverware
+    uniqueID: 2403292351
+    locked: 0
+  - name: Blood
+    uniqueID: 2781796605
+    locked: 0
+  - name: Cheese
+    uniqueID: 1036354807
+    locked: 0
+  - name: Mouse
+    uniqueID: 615327727
     locked: 0
