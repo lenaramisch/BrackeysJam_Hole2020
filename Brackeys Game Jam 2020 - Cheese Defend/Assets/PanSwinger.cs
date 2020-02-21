@@ -10,6 +10,7 @@ public class PanSwinger : MonoBehaviour
     public GameObject bloodprefab;
     public bool canKillMouse = false;
     public bool canSwingAgain = true;
+    public GameObject scoreManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +42,7 @@ public class PanSwinger : MonoBehaviour
                 Destroy(blood, 3f);
                 collider.gameObject.GetComponent<CheeseEater>().gotHit = true;
                 Destroy(collider.gameObject, 4f);
+                scoreManager.GetComponent<ScoreManager>().score++;
             }
         }
     }
