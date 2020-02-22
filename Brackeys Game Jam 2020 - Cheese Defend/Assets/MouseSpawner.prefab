@@ -46,4 +46,9 @@ MonoBehaviour:
   mousePrefab: {fileID: 2801302514878964912, guid: 8038b5454b5081d479a87af23f6215ed,
     type: 3}
   mouseAmount: 1
+  multiplierOne: 0
+  multiplierTwo: 0
+  multiplierThree: 0
+  multiplierFour: 0
+  mouseVoiceSound: {fileID: 8300000, guid: cc7ad69bc35601b409b7c686a331427a, type: 3}
   timeBetweenWaves: 7

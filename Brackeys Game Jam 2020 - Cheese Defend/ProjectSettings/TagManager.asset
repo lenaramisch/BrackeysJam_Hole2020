@@ -20,7 +20,7 @@ TagManager:
   - player
   - mouse
   - bottle
-  - 
+  - Player
   - 
   - 
   - 
@@ -63,4 +63,7 @@ TagManager:
     locked: 0
   - name: Mouse
     uniqueID: 615327727
+    locked: 0
+  - name: Player
+    uniqueID: 1497279627
     locked: 0

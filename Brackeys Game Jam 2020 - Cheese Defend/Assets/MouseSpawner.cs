@@ -9,6 +9,12 @@ public class MouseSpawner : MonoBehaviour
     public int mouseAmount;
     int difficultScale = 0;
 
+    public int multiplierOne = 3;
+    public int multiplierTwo = 5;
+    public int multiplierThree = 9;
+    public int multiplierFour = 18;
+    public AudioClip mouseVoiceSound;
+
     public float timeBetweenWaves = 8f;
     private float timer;
 
@@ -31,21 +37,22 @@ public class MouseSpawner : MonoBehaviour
             timer = timeBetweenWaves;
             int multiplier = 3;
 
-            if (difficultScale <= 10)
+            if (difficultScale <= multiplierFour)
                 multiplier = 4;
 
-            if (difficultScale <= 8)
+            if (difficultScale <= multiplierThree)
                 multiplier = 3;
 
-            if (difficultScale <= 5)
+            if (difficultScale <= multiplierTwo)
                 multiplier = 2;
 
-            if (difficultScale <= 3)
+            if (difficultScale <= multiplierOne)
                 multiplier = 1;
 
             for (int i = 0; i < mouseAmount * multiplier; i++)
             {
                 Instantiate(mousePrefab, this.transform.position, Quaternion.identity);
+                AudioSource.PlayClipAtPoint(mouseVoiceSound, new Vector3(5, 1, 2));
             }
 
             difficultScale += 1;
